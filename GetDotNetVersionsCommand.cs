@@ -10,9 +10,21 @@ using Microsoft.Win32;
 namespace GetDotNetVersions
 {
     [RunInstaller(true)]
-    class GetDotNetVersionsCmdlets : PSSnapIn
+    public class GetDotNetVersionsSnapIn : PSSnapIn
     {
-
+        public GetDotNetVersionsSnapIn() : base() { }
+        public override string Name
+        {
+            get { return "Get-DotNetVersions"; }
+        }
+        public override string Vendor
+        {
+            get { return "tlehman"; }
+        }
+        public override string Description
+        {
+            get { return "A cmdlet to get the list of versions of the .NET Framework on your current system.";  }
+        }
     }
 
     [Cmdlet(VerbsCommon.Get, "DotNetVersions")]
