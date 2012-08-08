@@ -7,4 +7,4 @@ It's super simple, it just fetches subkeys of `HKLM\\SOFTWARE\\Microsoft\\NET Fr
 
 ## To-do
 * ~~Make console app~~
-* Make into a powershell cmdlet
+* ~~Make into a powershell cmdlet~~
