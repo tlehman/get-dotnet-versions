@@ -4,11 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Management;
 using System.Management.Automation;
+using System.ComponentModel;
 using Microsoft.Win32;
 
 namespace GetDotNetVersions
 {
-    [Cmdlet("Get", "DotNetVersions")]
+    [RunInstaller(true)]
+    class GetDotNetVersionsCmdlets : PSSnapIn
+    {
+
+    }
+
+    [Cmdlet(VerbsCommon.Get, "DotNetVersions")]
     public class GetDotNetVersionsCommand : Cmdlet
     {
         protected override void ProcessRecord()
